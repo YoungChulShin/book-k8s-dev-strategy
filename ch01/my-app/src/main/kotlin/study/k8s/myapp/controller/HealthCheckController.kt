@@ -10,4 +10,9 @@ class HealthCheckController {
     fun livenessCheck(): String {
         return "OK"
     }
+
+    @GetMapping("/api/ready")
+    fun readinessCheck(): String {
+        return "OK"
+    }
 }
