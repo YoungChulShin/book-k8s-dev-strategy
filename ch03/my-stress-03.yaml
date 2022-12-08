@@ -17,4 +17,11 @@ spec:
       containers:
       - name: stress-generator
         image: youngchulshin/stress:1.0.0
-        args: ["--cpu", "8", "--timeout", "60s"]
+        args: ["--cpu", "2", "--vm", "1", "--vm-bytes", "500M", "--timeout", "600s"]
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "500Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1000Mi"
