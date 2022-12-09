@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-stress
 spec:
-  replicas: 2
+  replicas: 4
   strategy:
     type: Recreate
   selector:
@@ -17,10 +17,10 @@ spec:
       containers:
       - name: stress-generator
         image: youngchulshin/stress:1.0.0
-        args: ["--cpu", "2", "--vm", "1", "--vm-bytes", "500M", "--timeout", "600s"]
+        args: ["--cpu", "100m", "--vm", "1", "--vm-bytes", "500M", "--timeout", "600s"]
         resources:
           requests:
-            cpu: "500m"
+            cpu: "1000m"
             memory: "500Mi"
           limits:
             cpu: "1000m"

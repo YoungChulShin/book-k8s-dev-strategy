@@ -9,4 +9,4 @@ spec:
     name: my-stress
   minReplicas: 1
   maxReplicas: 4
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 80
