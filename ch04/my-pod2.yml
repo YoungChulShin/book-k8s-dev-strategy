@@ -8,4 +8,6 @@ spec:
     image: youngchulshin/my-message:1.1.0
     ports:
     - containerPort: 8080
-    args: ["--spring.profiles.active=prod"]
+    env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: "prod"
