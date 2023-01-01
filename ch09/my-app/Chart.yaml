@@ -1,0 +1,10 @@
+apiVersion: v2
+name: my-app
+description: My application for kubernetes study
+# 차트의 타입
+# application: 독립적으로 실행 가능한 타입
+# library: 다른 차트의 구성에 도움을 주는 타입
+type: application
+version: 1.0.1
+# 차트가 실행하고자 하는 애플리케이션 버전
+appVersion: "1.0.0"
